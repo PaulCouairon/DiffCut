@@ -1,0 +1,11 @@
+torchvision
+diffusers
+transformers
+matplotlib
+opencv-python
+ipykernel
+ipywidgets
+seaborn
+scipy
+timm
+fvcore
