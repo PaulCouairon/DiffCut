@@ -8,6 +8,7 @@ Zero-Shot Image Segmentation via Recursive Normalized Cut on Diffusion Features 
 <h2>
 <a href="">Paul Couairon</a>&ensp;
 <a href="">Mustafa Shukor</a>&ensp;
+
 <a href="">Jean-Emmanuel Haugeard</a>&ensp;
 <a href="">Matthieu Cord</a>&ensp;
 <a href="">Nicolas Thome</a>&ensp;
@@ -19,9 +20,7 @@ Zero-Shot Image Segmentation via Recursive Normalized Cut on Diffusion Features 
 src="https://img.shields.io/badge/arXiv-DiffCut-b31b1b.svg" height=25em></a>
 <a href="https://diffcut.github.io"><img 
 src="https://img.shields.io/static/v1?label=Project&message=Website&color=green" height=25em></a>
-<a href="https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/diffcut.ipynb"><img 
-src="https://img.shields.io/badge/-Demo-blue.svg?colorA=333&logo=googlecolab" height=25em></a>
-<p></p>
+
 
 ![main_figure.png](./assets/main_figure.png)
 
@@ -54,7 +53,7 @@ In the paper, we evaluate DiffCut on 6 benchmarks: PASCAL VOC (20 classes + back
 
 ### Run Evaluation
 ```
-python eval_segmentation_diffcut.py --dataset_name Cityscapes --tau 0.5 --alpha 10 --refinement
+python eval_diffcut.py --dataset_name Cityscapes --tau 0.5 --alpha 10 --refinement
 ```
 
 
