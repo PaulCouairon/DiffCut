@@ -6,19 +6,19 @@ Zero-Shot Image Segmentation via Recursive Normalized Cut on Diffusion Features 
 <p></p>
 
 <h2>
-<a href="">Paul Couairon</a>&ensp;
-<a href="">Mustafa Shukor</a>&ensp;
+<a href="https://scholar.google.fr/citations?user=yQRnP7YAAAAJ&hl=fr">Paul Couairon</a>&ensp;
+<a href="https://scholar.google.com/citations?user=lhp9mRgAAAAJ&hl=en">Mustafa Shukor</a>&ensp;
 
-<a href="">Jean-Emmanuel Haugeard</a>&ensp;
-<a href="">Matthieu Cord</a>&ensp;
-<a href="">Nicolas Thome</a>&ensp;
+<a href="https://fr.linkedin.com/in/jean-emmanuel-haugeard">Jean-Emmanuel Haugeard</a>&ensp;
+<a href="https://cord.isir.upmc.fr">Matthieu Cord</a>&ensp;
+<a href="https://thome.isir.upmc.fr">Nicolas Thome</a>&ensp;
 </h2>
 
 
 <p></p>
 <a href=""><img
 src="https://img.shields.io/badge/arXiv-DiffCut-b31b1b.svg" height=25em></a>
-<a href="https://diffcut.github.io"><img 
+<a href="https://diffcut-segmentation.github.io"><img 
 src="https://img.shields.io/static/v1?label=Project&message=Website&color=green" height=25em></a>
 
 
