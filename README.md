@@ -16,7 +16,7 @@ Zero-Shot Image Segmentation via Recursive Normalized Cut on Diffusion Features 
 
 
 <p></p>
-<a href=""><img
+<a href="https://arxiv.org/abs/2406.02842v1"><img
 src="https://img.shields.io/badge/arXiv-DiffCut-b31b1b.svg" height=25em></a>
 <a href="https://diffcut-segmentation.github.io"><img 
 src="https://img.shields.io/static/v1?label=Project&message=Website&color=green" height=25em></a>
@@ -60,6 +60,14 @@ python eval_diffcut.py --dataset_name Cityscapes --tau 0.5 --alpha 10 --refineme
 
 ## Citation
 ```
+@misc{couairon2024zeroshot,
+    title={Zero-Shot Image Segmentation via Recursive Normalized Cut on Diffusion Features},
+    author={Paul Couairon and Mustafa Shukor and Jean-Emmanuel Haugeard and Matthieu Cord and Nicolas Thome},
+    year={2024},
+    eprint={2406.02842},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
 ```
 
 ## Acknowledgements
