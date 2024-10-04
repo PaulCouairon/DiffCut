@@ -28,7 +28,7 @@ class FeatureExtractor(nn.Module):
         with torch.no_grad():
             features = self.model.get_intermediate_layers(
                 img,
-                n = len(self.model.blocks),
+                n = 1,
                 reshape = True,
                 return_prefix_tokens = True,
                 norm = True,

@@ -1,6 +1,6 @@
 <div align="center">
 <h1>
-Zero-Shot Image Segmentation via Recursive Normalized Cut on Diffusion Features </h1><br>
+DiffCut: Catalyzing Zero-Shot Semantic Segmentation with Diffusion Features and Recursive Normalized Cut</h1><br>
 <p></p>
 
 <p></p>

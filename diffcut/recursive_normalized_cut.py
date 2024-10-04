@@ -72,14 +72,14 @@ class DiffCut:
         """
         Implementation of recursive NCut.
         Inputs
-        feats: the pixel/patch features of an imageL
-        tau: float value that stops the recursion.
+        feats: the pixel/patch features of an image.
+        tau: threshold value that stops the recursion.
         dims: dimension of the map from which the features are used.
         painting: registers the explored areas.
         mask: area of current bipartition.
         accumulator: registers the segmentation masks.
         level: counts the level of recursion.
-        alpha: exponent
+        alpha: affinity matrix exponent
         """
         if level == 0:
             accumulator_masks = []
@@ -122,7 +122,6 @@ class DiffCut:
 
         return accumulator_masks
 
-
     def assemble_clusters(self, clusters, h, w):
         mask = torch.zeros((h, w)).to("cuda")
         final_mask = torch.zeros((h, w)).to("cuda")
@@ -136,13 +135,13 @@ class DiffCut:
 
         return final_mask
 
-
-    def generate_masks(self, features, tau=0.5, mask_size=(128, 128), masks=None, alpha=10):
+    def generate_masks(self, features, tau=0.5, mask_size=(128, 128), masks=None, alpha=10, img_size=1024):
         # Step 1: Recursive Feature Clustering
-        _, c, h, w = features.shape
         h_mask, w_mask = mask_size
-        feats_norm = F.normalize(features, p=2, dim=1).to(torch.float32)
         mask_pooling = MaskPooling()
+        feats = features.reshape(1, img_size//32, img_size//32, -1).permute(0, 3, 1, 2).to(torch.float32)
+        feats_norm = F.normalize(feats, dim=1)
+        _, c, h, w = feats_norm.shape
 
         if masks is None:
             x = feats_norm.reshape(c, h*w)
@@ -167,8 +166,8 @@ class DiffCut:
         upsampled_feats = torch.nn.Upsample(size=mask_size, mode='bilinear')(feats_norm)
 
         # Label association
-        masks = torch.argmax(torch.t(upsampled_feats.reshape(c, h_mask*w_mask)) @ torch.t(clusters_embeddings), dim=1).reshape(1, 1, h_mask, w_mask)
-
+        similarity_scores = torch.t(upsampled_feats.reshape(c, h_mask*w_mask)) @ torch.t(clusters_embeddings)
+        masks = torch.argmax(similarity_scores, dim=1).reshape(1, 1, h_mask, w_mask)
         masks = masks.cpu().numpy().astype(int)
 
         return masks
