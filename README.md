@@ -4,7 +4,7 @@ DiffCut: Catalyzing Zero-Shot Semantic Segmentation with Diffusion Features and 
 <br>
 </h1><br>
 
-<p style="font-size: 30px"> NeurIPS 2024</p>
+<p style="font-size: 50px;"> NeurIPS 2024</p>
 
 <p></p>
 
