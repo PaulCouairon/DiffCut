@@ -1,6 +1,11 @@
 <div align="center">
 <h1>
-DiffCut: Catalyzing Zero-Shot Semantic Segmentation with Diffusion Features and Recursive Normalized Cut</h1><br>
+DiffCut: Catalyzing Zero-Shot Semantic Segmentation with Diffusion Features and Recursive Normalized Cut
+<br>
+<br>
+<p style="font-size: 20px"> NeurIPS 2024</p>
+</h1><br>
+
 <p></p>
 
 <p></p>
