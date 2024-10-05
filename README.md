@@ -2,15 +2,12 @@
 <h1>
 DiffCut: Catalyzing Zero-Shot Semantic Segmentation with Diffusion Features and Recursive Normalized Cut
 <br>
-</h1><br>
-
-<p style="font-size: 50px;"> NeurIPS 2024</p>
-
-<p></p>
-
-<p></p>
+</h1>
 
 <h2>
+NeurIPS 2024
+<br>
+<br>
 <a href="https://scholar.google.fr/citations?user=yQRnP7YAAAAJ&hl=fr">Paul Couairon</a>&ensp;
 <a href="https://scholar.google.com/citations?user=lhp9mRgAAAAJ&hl=en">Mustafa Shukor</a>&ensp;
 
