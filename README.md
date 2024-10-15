@@ -41,9 +41,9 @@ python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 ```
 
 ## Demo
-Try __DiffCut__ by running the notebook ``diffcut.ipynb``
+Try our __DiffCut__ method by running the notebook ``diffcut.ipynb``
 
-Visualize the __semantic coherence__ of vision encoders with ``semantic_coherence.ipynb``
+Visualize the __semantic coherence__ of various vision encoders (SD, CLIP, DINO...) with ``semantic_coherence.ipynb``
 
 
 
@@ -76,6 +76,8 @@ python eval_diffcut.py --dataset_name Cityscapes --tau 0.5 --alpha 10 --refineme
 This repo relies on the following projects:
 
 [Diffuse, Attend, and Segment: Unsupervised Zero-Shot Segmentation using Stable Diffusion](https://github.com/google/diffseg)
+
+[Emergent Correspondence from Image Diffusion](https://github.com/Tsingularity/dift)
 
 [Open Vocabulary Semantic Segmentation with Patch Aligned Contrastive Learning](https://arxiv.org/abs/2212.04994)
 
