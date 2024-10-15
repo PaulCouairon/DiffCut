@@ -43,7 +43,7 @@ python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 ## Demo
 Try our __DiffCut__ method by running the notebook ``diffcut.ipynb``
 
-Visualize the __semantic coherence__ of various vision encoders (SD, CLIP, DINO...) with ``semantic_coherence.ipynb``
+Visualize the __semantic coherence__ of vision encoders (SD, CLIP, DINO...) with ``semantic_coherence.ipynb``
 
 
 
