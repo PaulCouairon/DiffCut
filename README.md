@@ -18,7 +18,7 @@ NeurIPS 2024
 
 
 <p></p>
-<a href="https://arxiv.org/abs/2406.02842v1"><img
+<a href="https://arxiv.org/abs/2406.02842v2"><img
 src="https://img.shields.io/badge/arXiv-DiffCut-b31b1b.svg" height=25em></a>
 <a href="https://diffcut-segmentation.github.io"><img 
 src="https://img.shields.io/static/v1?label=Project&message=Website&color=green" height=25em></a>
