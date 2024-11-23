@@ -9,3 +9,4 @@ seaborn
 scipy
 timm
 fvcore
+open_clip_torch

@@ -56,8 +56,8 @@ In the paper, we evaluate DiffCut on 6 benchmarks: PASCAL VOC (20 classes + back
 ### Run Evaluation
 ```
 python eval_diffcut.py --dataset_name Cityscapes --tau 0.5 --alpha 10 --refinement
+python eval_diffcut_openvoc.py --dataset_name VOC20 --tau 0.5 --alpha 10 --refinement
 ```
-
 
 
 ## Citation

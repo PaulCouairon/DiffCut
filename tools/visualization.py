@@ -53,10 +53,10 @@ class Demo:
                     gc.collect()
                     torch.cuda.empty_cache()
 
-                    src_vec = F.normalize(src_vec) # 1, C
-                    trg_vec = F.normalize(trg_vec) # N, C, HW
+                    src_vec = F.normalize(src_vec.to(torch.float32), dim=1, p=2) # 1, C
+                    trg_vec = F.normalize(trg_vec.to(torch.float32), dim=1, p=2) # N, C, HW
                     cos_map = torch.matmul(src_vec, trg_vec).view(self.num_imgs - 1, self.img_size[0], self.img_size[1])
-                    cos_map = cos_map.to(torch.float32).cpu().numpy() # N, H, W
+                    cos_map = cos_map.cpu().numpy() # N, H, W
 
                     axes[0].clear()
                     axes[0].imshow(self.imgs[0])
@@ -70,7 +70,7 @@ class Demo:
 
                         heatmap = cos_map[i-1]
                         heatmap = (heatmap - np.min(heatmap)) / (np.max(heatmap) - np.min(heatmap))  # Normalize to [0, 1]
-                        heatmap = gaussian_filter(heatmap, sigma=5)
+                        heatmap = gaussian_filter(heatmap, sigma=3)
                         axes[i].imshow(self.imgs[i])
                         axes[i].imshow(255 * heatmap, alpha=alpha, cmap='jet')
                         axes[i].axis('off')

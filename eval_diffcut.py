@@ -19,14 +19,12 @@ from dataloader.iterator import DataIterator, get_fine_to_coarse, load_imdb
 
 np.seterr(divide='ignore', invalid='ignore')
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logging.info('message')
 
 class Benchmark_Segmentation:
     def __init__(self,
                  model_name: Literal["SSD-1B", "SSD-vega", "SD1.4"] = "SSD-1B",
                  dataset_name: Literal["COCO-Stuff", "COCO-Object", "VOC20", "Cityscapes", \
                                        "Context", "ADE20K"] = "VOC20",
-                 guidance_scale: float = 1.,
                  step: int = 50,
                  img_size: int = 1024,
                  refinement: bool = False,
@@ -42,7 +40,6 @@ class Benchmark_Segmentation:
 
         self.img_size = img_size
         self.step = step
-        self.guidance_scale = guidance_scale
         self.refinement = refinement
         self.dataset_name = dataset_name
         self.alpha = alpha
