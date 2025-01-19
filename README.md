@@ -62,13 +62,13 @@ python eval_diffcut_openvoc.py --dataset_name VOC20 --tau 0.5 --alpha 10 --refin
 
 ## Citation
 ```
-@misc{couairon2024zeroshot,
-    title={Zero-Shot Image Segmentation via Recursive Normalized Cut on Diffusion Features},
-    author={Paul Couairon and Mustafa Shukor and Jean-Emmanuel Haugeard and Matthieu Cord and Nicolas Thome},
+@inproceedings{
+    couairon2024diffcut,
+    title={DiffCut: Catalyzing Zero-Shot Semantic Segmentation with Diffusion Features and Recursive Normalized Cut},
+    author={Paul Couairon and Mustafa Shukor and Jean-Emmanuel HAUGEARD and Matthieu Cord and Nicolas THOME},
+    booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
     year={2024},
-    eprint={2406.02842},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    url={https://openreview.net/forum?id=N0xNf9Qqmc}
 }
 ```
 
